@@ -1,0 +1,38 @@
+<div class="page-area">
+    <div class="col-md-12">
+        <div class="row justify-content-center">
+            <div class="col-md-12 px-5">
+                <h3 class="text text-primary" style="text-align: center;">Patients Details:</h3>
+                <br>
+                
+                <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col"># S.No.</th>
+                        <th scope="col">Patient Name</th>
+                        <th scope="col">Updated On</th>
+                        <th><i class="fa fa-ellipsis-v" aria-hidden="true"></i></th>
+                      </tr>
+                      <tr>
+                        <td><h5>Waiting :{{Waiting}}</h5></td>
+                        <td><h5>Completed :{{Completed}}</h5></td>
+                        <td><h5>Total :{{Total}}</h5></td>
+                      </tr>
+                    </thead>
+                      
+                    <tbody>
+                        <tr *ngFor = "let Patient of patients;index as i" (click)="onClick(Patient.other.pid)">
+                            <th scope="row">{{Patient.tokenName}}</th>
+                            <td>{{Patient.name}}<br><small>{{Patient.description}}</small></td>
+                            <td>{{Patient.updatedAt|date}}</td>
+                            <td><i class="fa fa-ellipsis-v" aria-hidden="true"></i><br>
+                                <i class="fa fa-circle" aria-hidden="true" [style.color]="Patient.status ? 'green': 'red'"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

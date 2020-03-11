@@ -1,0 +1,43 @@
+<div class="container">
+   <div class="col-md-12 mt-2">
+     <h3 style="width: 100%;background-color: black;color: rgb(247, 205, 205);padding: 5px 10px;">{{patientDetails.person_full_name}}</h3>
+    <div class="row justify-content-center">
+      <div class="col-md-3">
+        <img src="{{patientDetails.person_pic}}" alt="emage error" style="width: 100%;">
+      </div>
+      <div class="col-md-9">
+        <table class="table">
+          <tbody>
+            <tr>
+              <th scope="col">PID</th>
+              <th scope="col">{{patientDetails._pk}}</th>
+            </tr>
+          
+           <tr>
+              <td>Name</td>
+              <td>{{patientDetails.person_full_name}}</td>
+            </tr>
+            <tr>
+              <td>Gender</td>
+              <td>{{patientDetails.person_gender}}</td>
+              
+            </tr>
+            <tr>
+              <td>DOB</td>
+              <td>NA</td>
+            </tr>
+            <tr>
+              <td>Age</td>
+              <td>{{patientDetails.person_age}}</td>
+            </tr>
+            <tr>
+              <td>Phone</td>
+              <td>{{patientDetails.person_phone}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+     </div>
+   </div>
+</div>

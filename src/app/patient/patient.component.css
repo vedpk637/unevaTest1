@@ -1,0 +1,9 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+.table{
+    text-align: center;
+}
+tbody :hover{
+    background-color: rgb(17, 223, 137);
+    color: white;
+    
+  }
